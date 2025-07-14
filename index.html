@@ -59,28 +59,18 @@
 
         /* Hero Section Styles (MOMBO Intro) */
         .hero-section {
-            background-color: #FFD700; /* Matching the image's background */
+            background-color: #000000; /* Changed to black */
             position: relative;
             min-height: 850px; /* Make it taller to showcase the background */
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            color: #121212; /* Dark text for contrast */
-            text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.2); /* Subtle shadow for readability */
+            color: #f7f7f7; /* Light text for contrast */
+            text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for readability on dark background */
         }
-        /* Add a subtle overlay for text readability */
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.1); /* Very light overlay */
-            z-index: 1;
-        }
-        .hero-section > * { /* Ensure content is above the overlay */
+        /* Removed the ::before overlay */
+        .hero-section > * { /* Ensure content is above any potential background elements */
             position: relative;
             z-index: 2;
         }
@@ -99,7 +89,7 @@
             font-family: 'Press Start 2P', cursive;
             font-size: 1.8em;
             margin-bottom: 40px;
-            color: #121212;
+            color: #f7f7f7; /* Changed to light gray */
             max-width: 900px;
             line-height: 1.5;
             font-weight: bold;
@@ -130,7 +120,7 @@
             font-size: 1.1em;
             margin-top: 50px;
             font-style: italic;
-            color: #121212;
+            color: #f7f7f7; /* Changed to light gray */
             max-width: 700px;
             line-height: 1.6;
         }
